@@ -34,6 +34,12 @@ Incorrect solution(s):
 
 - 500 x1 (too many widgets)
 
-# Your task
+# The task
 
 Write a program that will tell Wally’s Widgets what packs to send out, for any given order size.
+
+# Summary
+
+The app has been written in Javascript using a React.js front-end framework. Some basic CSS styling has also been applied.
+
+Before implementing the front-end interface, the functionality around the challenge was worked on and tested using Jest to ensure all test cases were considered and to prevent any false-positive tests passing.
