@@ -1,12 +1,10 @@
 import "./App.css";
-import { Header } from "../src/components/Header";
-import { Main } from "../src/components/Main";
+import { WallysWidgets } from "./components/WallysWidgets";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Main />
+    <div className="app">
+      <WallysWidgets />
     </div>
   );
 }

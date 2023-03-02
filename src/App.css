@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap');
+
+.app {
+    font-family: 'Shantell Sans', cursive;
+    width: 100vw;
+    height: 100vh;
+    background-color: #3da9fc;
+    color: #094067;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 4rem;
+}
+
+.main {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}

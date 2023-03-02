@@ -1,4 +1,10 @@
-function calculatePacks(orderSize) {
+import { useState } from "react";
+
+export const WallysWidgets = () => {
+  const [orderSize, setOrderSize] = useState(0);
+  const [packsToBeSentOut, setPacksToBeSentOut] = useState([]);
+
+  function calculatePacks(orderSize) {
     const packSizes = [
       { size: 250 },
       { size: 500 },
@@ -34,4 +40,32 @@ function calculatePacks(orderSize) {
     return packsToBeSentOut;
   }
 
-  module.exports = calculatePacks;
+  const handleOrderSizeChange = (event) => {
+    const orderSize = parseInt(event.target.value);
+    setOrderSize(orderSize);
+    if (orderSize > 0) {
+      const packsToBeSentOut = calculatePacks(orderSize);
+      setPacksToBeSentOut(packsToBeSentOut);
+    } else {
+      setPacksToBeSentOut([]);
+    }
+  };
+
+  return (
+    <div className="main">
+      <h1>Wally's Widget Company</h1>
+      <label>Order size (in widgets):</label>
+      <input type="number" value={orderSize} onChange={handleOrderSizeChange} />
+      <h2>Packs to be sent out:</h2>
+      <ul>
+        {packsToBeSentOut.map((pack) => (
+          <li key={pack.size}>
+            {pack.quantity} pack(s) of {pack.size} widgets
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default WallysWidgets;
